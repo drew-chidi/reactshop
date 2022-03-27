@@ -1,0 +1,43 @@
+.products {
+  max-width: 60rem;
+  width: 90%;
+  margin: 2rem auto;
+  animation: products-appear 1s ease-out forwards;
+}
+
+.products ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  /* New Styles */
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-auto-rows: 350px;
+}
+
+@keyframes meals-appear {
+  from {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (min-width: 768px) {
+  .products ul {
+    grid-template-columns: 33.3% 33.3% 33.3%;
+  }
+}
+
+@media (min-width: 1280px) {
+  .products {
+    max-width: 75rem;
+  }
+  .products ul {
+    grid-template-columns: 25% 25% 25% 25%;
+  }
+}
