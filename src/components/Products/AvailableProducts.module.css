@@ -9,7 +9,6 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  /* New Styles */
   display: grid;
   grid-template-columns: 50% 50%;
   grid-auto-rows: 350px;

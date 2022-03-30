@@ -1,7 +1,8 @@
 .form {
   margin: 1rem 0;
-  height: 19rem;
-  overflow: auto;
+  height: 12rem;
+  overflow-y: scroll;
+  width: 100%;
 }
 
 .control {
@@ -9,7 +10,7 @@
 }
 
 .control label {
-  font-weight: bold;
+  font-size: 0.875rem;
   margin-bottom: 0.25rem;
   display: block;
 }
@@ -20,6 +21,12 @@
   border-radius: 4px;
   width: 20rem;
   max-width: 100%;
+}
+
+.control p {
+  font-size: 0.7rem;
+  margin-top: 0;
+  font-style: italic;
 }
 
 .actions {
@@ -34,8 +41,13 @@
   cursor: pointer;
   background-color: transparent;
   border: none;
-  border-radius: 25px;
+  border-radius: 5px;
   padding: 0.5rem 2rem;
+}
+
+.actions :nth-child(2) {
+  background-color: rgb(20, 145, 20);
+  color: white;
 }
 
 .actions button:hover,
@@ -61,4 +73,19 @@
 .invalid input {
   border-color: #aa0b20;
   background-color: #ffeff1;
+}
+
+@media (min-width: 768px) {
+  .control label {
+    font-size: 1rem;
+  }
+  .control p {
+    font-size: 0.875rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .form {
+    height: 20rem;
+  }
 }

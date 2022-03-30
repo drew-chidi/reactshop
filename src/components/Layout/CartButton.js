@@ -1,5 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
-import CartIcon from "../Cart/CartIcon";
+import { BsMinecart } from "react-icons/bs";
+import { IconContext } from "react-icons";
+
 import classes from "./CartButton.module.css";
 import CartContext from "../../store/cart-context";
 
@@ -30,11 +32,16 @@ const CartButton = (props) => {
   }, [items]);
   return (
     <button className={btnClasses} onClick={props.onClick}>
-      <span className={classes.icon}>
-        <CartIcon />
-      </span>
       <span>Cart</span>
-      <span className={classes.badge}>{numberOfCartItems}</span>
+      <IconContext.Provider value={{ size: "1.6rem" }}>
+        <span className={classes.icon}>
+          <BsMinecart fill='white' />
+        </span>
+      </IconContext.Provider>
+
+      {numberOfCartItems > 0 && (
+        <span className={classes.badge}>{numberOfCartItems}</span>
+      )}
     </button>
   );
 };

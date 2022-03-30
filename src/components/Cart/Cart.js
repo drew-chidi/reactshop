@@ -72,15 +72,13 @@ const Cart = (props) => {
     </Fragment>
   );
 
-  console.log("is", submitted);
-  console.log("Subs", isSubmitting);
   return (
     <Modal onClose={props.onClose}>
       {!isSubmitting && !submitted && (
         <Fragment>
           {cartItems}
           <div className={classes.total}>
-            <span>Total Amount</span>
+            <span>Sub-total</span>
             <span>{totalAmount}</span>
           </div>
           {checkout && (
@@ -96,7 +94,7 @@ const Cart = (props) => {
               </button>
               {itemsAvailable && (
                 <button className={classes.button} onClick={checkoutHandler}>
-                  Order
+                  Checkout
                 </button>
               )}
             </div>

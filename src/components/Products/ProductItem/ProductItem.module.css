@@ -4,8 +4,6 @@
   margin: 1rem;
   padding-bottom: 1rem;
   border-bottom: 1px solid #ccc;
-
-  /* New STyles */
   width: calc(50%-6px);
   flex-direction: column;
 }
@@ -22,27 +20,23 @@
 
 .product .title {
   margin: 0.25rem 0;
-
-  /* New */
+  min-height: 28px;
   display: -webkit-box;
   overflow: hidden;
   text-overflow: ellipsis;
   line-height: 14px;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
-  font-size: 0.875rem;
-  /* word-wrap: break-word; */
-}
-
-.description {
-  font-style: italic;
+  font-size: 0.625rem;
+  opacity: 0.7;
+  word-wrap: break-word;
 }
 
 .price {
   margin-top: 0.25rem;
   font-weight: bold;
-  color: #ad5502;
-  font-size: 1.25rem;
+  color: rgb(95, 95, 95);
+  font-size: 1rem;
 }
 
 @media (min-width: 768px) {
