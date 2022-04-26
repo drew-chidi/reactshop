@@ -4,7 +4,7 @@ import classes from "./Checkout.module.css";
 const isEmpty = (val) => {
   return val.trim() === "";
 };
-const isFiveChars = (val) => val.trim().length === 6;
+const isFiveChars = (val) => val.trim().length >= 5;
 
 const Checkout = (props) => {
   const [formValidity, setFormValidity] = useState({
@@ -84,7 +84,9 @@ const Checkout = (props) => {
       <div className={postalCodeControlClasses}>
         <label htmlFor='postal'>Postal Code</label>
         <input type='text' id='postal' ref={postalCodeInputRef} />
-        {!formValidity.postalCode && <p>Please enter a valid postal code</p>}
+        {!formValidity.postalCode && (
+          <p>Postal code should be 5 digits and above</p>
+        )}
       </div>
       <div className={cityControlClasses}>
         <label htmlFor='city'>City</label>
