@@ -31,8 +31,8 @@ const AvailableProducts = () => {
     }
     // after this line, our function will wait for the `response.json()` call to be settled
     // the `response.json()` call will either return the JSON object or throw an error
-    const json = await response.json();
-    setProducts(json);
+    const data = await response.json();
+    setProducts(data);
     setLoading(false);
   };
 
